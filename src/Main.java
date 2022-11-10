@@ -1,19 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("ДЗ 2 - задача 1:");
-        for (int i = 1904; i <= 2096; i = i + 4) {
-            System.out.println(i + " год является високосным.");
+        System.out.println("ДЗ 3 - задача 1:");
+        int investment = 29000;
+        int savings = 0;
+        for (int i = 1; i <= 12; i++) {
+            savings = savings + investment;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + savings + " рублей");
         }
 
-        System.out.println("ДЗ 2 - задача 2:");
-        for (int j = 7; j <= 98; j = j + 7) {
-            System.out.print(j + " ");
-        }
-        System.out.println(" ");
-
-        System.out.println("ДЗ 2 - задача 3:");
-        for (int i = 1; i <= 512; i = i * 2) {
-            System.out.print(i + " ");
+        System.out.println("ДЗ 3 - задача 2:");
+        int investment1 = 29000;
+        int savings1 = 0;
+        for (int i = 1; i <= 12; i++) {
+            savings1 = savings1 + savings1 / 100;
+            savings1 = savings1 + investment1;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + savings1 + " рублей");
         }
     }
 }
