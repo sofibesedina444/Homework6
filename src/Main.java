@@ -1,36 +1,44 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("ДЗ 1 часть 2 - задача 1:");
-        double investment = 15000;
-        double savings = 0;
+        System.out.println("ДЗ 2 часть 2 - задача 1:");
         int month = 0;
-        while (savings <= 2459000) {
-            savings = savings + investment;
+        int savings = 15000;
+        while (savings < 12_000_000) {
+            savings = savings + savings * 7 / 100;
             month++;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + savings + " рублей");
         }
-        System.out.println("Месяц " + month + ", сумма накоплений равна " + savings + " рублей");
 
-        System.out.println("ДЗ 1 часть 2 - задача 2:");
-        int i = 0;
-        while (i < 10) {
-            i++;
-            System.out.print(i + " ");
+        System.out.println("ДЗ 2 часть 2 - задача 2:");
+        int month1 = 0;
+        int savings1 = 15000;
+        while (savings1 < 12_000_000) {
+            savings1 = savings1 + savings1 * 7 / 100;
+            month1++;
+            if (month1 % 6 == 0) {
+                System.out.println("Месяц " + month1 + ", сумма накоплений равна " + savings1 + " рублей");
+            }
         }
-        System.out.println();
-        for (int j = 10; j >= 1; j--) {
-            System.out.print(j + " ");
-        }
-        System.out.println();
 
-        System.out.println("ДЗ 1 часть 2 - задача 3:");
-        int population = 12_000_000;
-        int fertility = 17;
-        int mortality = 8; // рождаемость и смертность на 1000 человек за 1 год
-        int growth = (population / 1000) * (fertility - mortality); // прирост численности за 1 год
-        for (int years = 1; years <= 10; years++) {
-            population = population + growth;
-            System.out.println("Год " + years + ", численность населения составляет " + population);
+        System.out.println("ДЗ 2 часть 2 - задача 3:");
+        int month2 = 0;
+        int savings2 = 15000;
+        while (month2 < 108) { // 9 лет = 108 месяцев
+            savings2 = savings2 + savings2 * 7 / 100;
+            month2++;
+            if (month2 % 6 == 0) {
+                System.out.println("Месяц " + month2 + ", сумма накоплений равна " + savings2 + " рублей");
+            }
+        }
+
+        System.out.println("ДЗ 2 часть 2 - задача 4:");
+        int day = 7; // 07.10.2022 год
+        while (day < 31) {
+            if (day % 7 == 0) {
+                System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет.");
+                day += 7;
+            }
         }
     }
 }
